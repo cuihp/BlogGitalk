@@ -1,7 +1,7 @@
 (function(window, document) {
 
   var shareUrls = {
-    facebook:  '//www.facebook.com/sharer.php?u=',
+    github:  '//github.com/cuihp',
     twitter:   '//twitter.com/intent/tweet?url=',
     pinterest: '//pinterest.com/pin/create/button/?url=',
     pocket:    '//getpocket.com/save?url='
