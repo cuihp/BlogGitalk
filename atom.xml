@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.cuihp.top/"/>
-  <updated>2018-05-07T09:45:48.333Z</updated>
+  <updated>2018-06-14T07:31:55.205Z</updated>
   <id>https://blog.cuihp.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ADB常用命令</title>
+    <link href="https://blog.cuihp.top/2018/06/14-ADB%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html"/>
+    <id>https://blog.cuihp.top/2018/06/14-ADB常用命令.html</id>
+    <published>2018-06-14T07:14:00.000Z</published>
+    <updated>2018-06-14T07:31:55.205Z</updated>
+    
+    <content type="html"><![CDATA[<img src="https://img.cuihp.top/2956affbfa5ebcd906f54ba4a8a5755f.jpg"/><ol><li>当有多个设备连接时<ul><li>通过 <code>adb devices</code> 命令获取到设备名称</li><li>通过 <code>adb -s 设备名称</code> 指定设备执行命令</li></ul></li><li>打开设置界面<ul><li><code>adb shell am start com.android.settings/com.android.settings.Settings</code></li></ul></li><li><p>发送广播</p><pre><code>[-a &lt;ACTION&gt;][-d &lt;DATA_URI&gt;][-t &lt;MIME_TYPE&gt;] [-c &lt;CATEGORY&gt; [-c &lt;CATEGORY&gt;] ...] [-e|--es &lt;EXTRA_KEY&gt; &lt;EXTRA_STRING_VALUE&gt; 字符串] [--ez &lt;EXTRA_KEY&gt; &lt;EXTRA_BOOLEAN_VALUE&gt; boolean] [-e|--ei &lt;EXTRA_KEY&gt; &lt;EXTRA_INT_VALUE&gt; int ] [-n &lt;COMPONENT&gt;][-f &lt;FLAGS&gt;] [&lt;URI&gt;]</code></pre><ul><li>实例 <code>adb shell am broadcast -a com.android.test --es key &quot;value&quot;</code></li></ul></li><li>查看当前显示的Activity 包名、类名信息<ul><li><code>adb shell dumpsys activity | grep &quot;mFocusedActivity&quot;</code></li></ul></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;img src=&quot;https://img.cuihp.top/2956affbfa5ebcd906f54ba4a8a5755f.jpg&quot;/&gt;&lt;ol&gt;
+&lt;li&gt;当有多个设备连接时&lt;ul&gt;
+&lt;li&gt;通过 &lt;code&gt;adb devices&lt;/code&gt; 命令获取到设备名称&lt;/li&gt;
+      
+    
+    </summary>
+    
+      <category term="other" scheme="https://blog.cuihp.top/categories/other/"/>
+    
+    
+      <category term="adb" scheme="https://blog.cuihp.top/tags/adb/"/>
+    
+  </entry>
   
   <entry>
     <title>注册码</title>
