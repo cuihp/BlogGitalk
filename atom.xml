@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.cuihp.top/"/>
-  <updated>2018-06-14T07:31:55.205Z</updated>
+  <updated>2018-06-19T07:33:30.266Z</updated>
   <id>https://blog.cuihp.top/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://blog.cuihp.top/2018/06/14-ADB%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html"/>
     <id>https://blog.cuihp.top/2018/06/14-ADB常用命令.html</id>
     <published>2018-06-14T07:14:00.000Z</published>
-    <updated>2018-06-14T07:31:55.205Z</updated>
+    <updated>2018-06-19T07:33:30.266Z</updated>
     
-    <content type="html"><![CDATA[<img src="https://img.cuihp.top/2956affbfa5ebcd906f54ba4a8a5755f.jpg"/><ol><li>当有多个设备连接时<ul><li>通过 <code>adb devices</code> 命令获取到设备名称</li><li>通过 <code>adb -s 设备名称</code> 指定设备执行命令</li></ul></li><li>打开设置界面<ul><li><code>adb shell am start com.android.settings/com.android.settings.Settings</code></li></ul></li><li><p>发送广播</p><pre><code>[-a &lt;ACTION&gt;][-d &lt;DATA_URI&gt;][-t &lt;MIME_TYPE&gt;] [-c &lt;CATEGORY&gt; [-c &lt;CATEGORY&gt;] ...] [-e|--es &lt;EXTRA_KEY&gt; &lt;EXTRA_STRING_VALUE&gt; 字符串] [--ez &lt;EXTRA_KEY&gt; &lt;EXTRA_BOOLEAN_VALUE&gt; boolean] [-e|--ei &lt;EXTRA_KEY&gt; &lt;EXTRA_INT_VALUE&gt; int ] [-n &lt;COMPONENT&gt;][-f &lt;FLAGS&gt;] [&lt;URI&gt;]</code></pre><ul><li>实例 <code>adb shell am broadcast -a com.android.test --es key &quot;value&quot;</code></li></ul></li><li>查看当前显示的Activity 包名、类名信息<ul><li><code>adb shell dumpsys activity | grep &quot;mFocusedActivity&quot;</code></li></ul></li></ol>]]></content>
+    <content type="html"><![CDATA[<img src="https://img.cuihp.top/2956affbfa5ebcd906f54ba4a8a5755f.jpg"/><ol><li>当有多个设备连接时<ul><li>通过 <code>adb devices</code> 命令获取到设备名称</li><li>通过 <code>adb -s 设备名称</code> 指定设备执行命令</li></ul></li><li>打开设置界面<ul><li><code>adb shell am start com.android.settings/com.android.settings.Settings</code></li></ul></li><li><p>发送广播</p><pre><code>[-a &lt;ACTION&gt;][-d &lt;DATA_URI&gt;][-t &lt;MIME_TYPE&gt;] [-c &lt;CATEGORY&gt; [-c &lt;CATEGORY&gt;] ...] [-e|--es &lt;EXTRA_KEY&gt; &lt;EXTRA_STRING_VALUE&gt; 字符串] [--ez &lt;EXTRA_KEY&gt; &lt;EXTRA_BOOLEAN_VALUE&gt; boolean] [-e|--ei &lt;EXTRA_KEY&gt; &lt;EXTRA_INT_VALUE&gt; int ] [-n &lt;COMPONENT&gt;][-f &lt;FLAGS&gt;] [&lt;URI&gt;]</code></pre><ul><li>实例 <code>adb shell am broadcast -a com.android.test --es key &quot;value&quot;</code></li></ul></li><li>查看当前显示的Activity 包名、类名信息<ul><li><code>adb shell dumpsys activity | grep &quot;mFocusedActivity&quot;</code></li></ul></li></ol><ol start="5"><li>系统签名过的apk 安装<ul><li>进行系统签名 <code>java -jar signapk.jar platform.x509.pem platform.pk8 Demo.apk signedDemo.apk</code></li><li>将apk copy到 sd卡 <code>adb push demo.apk /sdcard/</code></li><li>进入终端 <code>adb shell</code></li><li>切换超级用户<code>su</code></li><li>挂载<code>mount -o remount /system</code></li><li>将APK copy到系统目录下 <code>busybox mv /sdcard/signed.apk /system/app</code></li><li>安装APK <code>adb install /system/app/signed.apk</code></li><li><code>reboot</code></li></ul></li></ol>]]></content>
     
     <summary type="html">
     
